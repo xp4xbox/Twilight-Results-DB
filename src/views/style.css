@@ -1,0 +1,108 @@
+body {
+    font-family: "Arvo", serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 16px;
+}
+
+.hyperlink {
+    color: black;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    display: grid;
+}
+
+.hyperlink:hover {
+    color: red;
+}
+
+.hyperlink2 {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hyperlink2:hover {
+    color: red;
+}
+
+.resultsTitleContainer {
+    padding: 16px 30px;
+    max-width: 75%;
+    display: inline-block;
+}
+
+.resultsContainer {
+    padding: 16px 30px;
+    max-width: 75%;
+    width: min-content;
+    column-gap: 30px;
+    display: grid;
+    white-space: nowrap;
+    grid-template-columns: auto auto auto auto;
+}
+
+button {
+    margin-right: 15px;
+    padding: 8px 15px;
+    border: unset;
+    border-radius: 13px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 9pt;
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+}
+
+button:hover {
+    color: #e8e8e8;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+input[type=text] {
+    width: 250px;
+    height: 30px;
+    font-family: inherit;
+    margin-right: 15px;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+.titleTxt {
+    text-align: center;
+    padding: 8px;
+    font-size: 22px;
+}
+
+.subTitleTxt {
+    text-align: left;
+    font-size: 16px;
+}

@@ -1,0 +1,32 @@
+extends layout
+
+block content
+
+    .resultsTitleContainer
+        .subTitleTxt
+            h3 #{event_name}
+        br
+        text #[strong Meet:] #{meet}
+        br
+        text #[strong Date:] #{date}
+    br
+
+    .resultsTitleContainer
+        text #[strong Result:]
+
+    .resultsContainer
+        each athlete in athletes
+            text Placed
+
+            if athlete.placement === 1
+                text  1st
+            else if athlete.placement === 2
+                text  2nd
+            else if athlete.placement === 3
+                text  3rd
+            else
+                text  #{athlete.placement}th
+
+            text #{athlete.time}
+
+            a(href="/athlete?name=" + athlete.result_athlete_full_name + "&birth_year=" + athlete.result_athlete_birth_year).hyperlink2 #{athlete.result_athlete_full_name}

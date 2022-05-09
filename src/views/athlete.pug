@@ -1,0 +1,35 @@
+extends layout
+
+block content
+
+    .resultsTitleContainer
+        .subTitleTxt
+            h3 #{athlete}
+        br
+
+        text #[strong Belongs to Clubs:]
+
+    .resultsContainer
+        each club in clubs
+            a(href="/club/" + club).hyperlink #{club}
+
+    .resultsTitleContainer
+        text #[strong Event Results:]
+
+    .resultsContainer
+        each result in results
+            text #{result.result_date}
+
+            if result.placement === 1
+                text  1st
+            else if result.placement === 2
+                text  2nd
+            else if result.placement === 3
+                text  3rd
+            else
+                text  #{result.placement}th
+
+            text #{result.time}
+            a(href="/event?event_name=" + result.result_evt_name + "&date=" + result.result_date + "&meet=" + result.result_meet_name).hyperlink2  #{result.result_evt_name}
+
+

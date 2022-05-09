@@ -1,0 +1,20 @@
+include layout
+
+block content
+    script(src="/script/main.js", type="module")
+
+    .container
+        div(id="btns")
+            input(type="text", id="inSearch")
+
+            button(id="btnAthleteSearch") Search by Athlete Name
+
+            button(id="btnClubSearch") Search by Club Name
+
+            button(id="btnEventSearch") Search by Event Name
+
+
+
+    div(id="ctnResultsTitle")
+    div(id="ctnResults")
+

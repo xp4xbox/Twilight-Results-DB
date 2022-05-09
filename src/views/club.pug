@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    .resultsTitleContainer
+        .subTitleTxt
+            h3 #{club}
+
+        br
+
+        text #[strong Athletes:]
+
+    .resultsContainer
+        each athlete in athletes
+             a(href="/athlete?name=" + athlete.competes_for_athlete_full_name + "&birth_year=" + athlete.competes_for_athlete_birth_year).hyperlink #{athlete.competes_for_athlete_full_name}
